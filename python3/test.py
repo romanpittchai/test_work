@@ -28,11 +28,8 @@ class TestFindHighestSum(unittest.TestCase):
 
 def check_input_data(item):
     try:
-        # Assuming the Rust function is trying to parse the string into an integer
-        # and returning an error if it fails.
         return int(item)
     except ValueError as e:
-        # In Python, we can raise a ValueError with the message if needed.
         raise ValueError("Invalid input data") from e
 
 class CheckInputDataTest(unittest.TestCase):
@@ -42,7 +39,6 @@ class CheckInputDataTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 check_input_data(item)
 
-# If this script is run directly, run the tests
 if __name__ == '__main__':
     unittest.main()
 
